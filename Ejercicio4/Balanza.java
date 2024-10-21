@@ -23,14 +23,20 @@ public class Balanza {
 		return T;
 	}
 	
+	public List<Producto> getProductos() {
+		return productos;  // retorno directamente la lista
+	}
+	
+	
+	
 	public void ponerEnCero() {
-		productos.clear();
+		productos.clear(); // mando a Oklahoma los elementos que haya en la lista
 	}
 	
 	public double getPesoTotal() {
 		double total = 0;
 		for (Producto producto : productos) {
-			total += producto.getPeso();
+			total += producto.getPeso(); // sumo el peso de los productos que hay dentro de la lista
 		}
 		return total;
 	}
@@ -38,14 +44,15 @@ public class Balanza {
 	public double getPrecioTotal() {
 		double precio = 0;
 		for (Producto producto : productos) {
-			precio += producto.getPrecio();			
+			precio += producto.getPrecio();	// sumo por cada producto que haya en la lista, si no hay ninguno no se ejecuta este for	
 		}
 		
 		return precio;
 	}
 	
 	public int getCantidadDeProductos() {
-		return productos.size();
+		return productos.size(); //Retorna numero de productos
 	}
 	
+
 }
