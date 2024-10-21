@@ -1,6 +1,6 @@
 package ar.edu.unlp.info.oo1.ejercicio5;
 
-public class Circulo  implements Figura{
+public class Circulo  extends Figura{
 	private double radio;
 	// private double Diametro; segun chatgpt si directamento
 	// calculo el diametro haciendo this.radio * 2 el diametro
