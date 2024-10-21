@@ -39,6 +39,9 @@ public class Balanza {
 			total += producto.getPeso(); // sumo el peso de los productos que hay dentro de la lista
 		}
 		return total;
+		// o si queres hacerte el actually
+		// return productos.stream().mapToDouble(producto -> producto.getPeso()).sum();
+		// recordar importar java.util.stream para que funcione esto.
 	}
 	
 	public double getPrecioTotal() {
