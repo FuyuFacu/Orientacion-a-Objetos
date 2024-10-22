@@ -11,8 +11,14 @@ public class Farola {
 		this.conexiones = new ArrayList<>(); 
 	}
 	
+	public void agregarVecino(Farola F) {
+		if (!getNeighbors().contains(F)) {
+			conexiones.add(F);
+		}
+	}
+	
 	public void pairWithNeighbor(Farola F) {
-		conexiones.add(F);
+		this.agregarVecino(F);
 		F.conexiones.add(this); // se agrega la reciprocidad
 	}
 	
