@@ -1,0 +1,14 @@
+@startuml
+class Farola{
+ -interruptor : Boolean
+ -conexiones : Farola[*]
+ +Farola()
+ +pairWithNeighbor(otraFarola : Farola)
+ +getNeighbours() : Farola[*]
+ +turnOff()
+ +turnOn()
+ +estaEncedido()
+}
+
+Farola "0..N" -- "0..N" Farola : conexiones
+@enduml
