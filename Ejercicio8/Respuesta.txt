@@ -1,0 +1,39 @@
+Gerente alan = new Gerente("Alan Turing");
+double aportesDeAlan = alan.aportes();
+
+Se ejecuta el método aportes() de la clase Gerente, que devuelve this.montoBasico() * 0.05.
+Para calcular el valor de this.montoBasico(), se llama al método montoBasico() de la clase Gerente.
+
+Estos son los metodos ejecutados:
+montoBasico() // Gerente
+aportes() //Gerente
+
+Gerente alan = new Gerente("Alan Turing");
+double sueldoBasicoDeAlan = alan.sueldoBasico();
+
+- Se ejecuta el método sueldoBasico() de la clase EmpleadoJerarquico, que hace un llamado a super.sueldoBasico().
+- El método super.sueldoBasico() es el de la clase Empleado, el cual devuelve this.montoBasico() + this.aportes().
+- Se invoca el método montoBasico() de la clase Gerente y luego el método aportes() de la clase Gerente.
+- Después se calcula el valor del método bonoPorCategoria() de la clase EmpleadoJerarquico.
+
+
+El valor de aportesDeAlan se calcula llamando a aportes() en la clase Gerente.
+
+aportesDeAlan = montoBasico() * 0.05;
+aportesDeAlan = 57000 * 0.05;
+aportesDeAlan = 2850;
+
+
+El valor de sueldoBasicoDeAlan se hace llamando a sueldoBasico() en la clase EmpleadoJerarquico.
+
+sueldoBasicoDeAlan = super.sueldoBasico() + bonoPorCategoria();
+
+// super.sueldoBasico() llama a:
+sueldoBasico() (Empleado) = montoBasico() + aportes()
+                           = 57000 + 2850
+                           = 59850;
+
+// bonoPorCategoria() (EmpleadoJerarquico) = 8000;
+
+sueldoBasicoDeAlan = 59850 + 8000;
+sueldoBasicoDeAlan = 67850;
