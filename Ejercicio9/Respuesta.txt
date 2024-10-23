@@ -1,0 +1,13 @@
+a) Cuenta con ganchos creo que se refiere a metodos que permiten a las subclases personalizar el comportamiento de ciertas operaciones, tales como extraer() o transferirACuenta() sin tener que cambiar la estructura de la clase abstracta Cuenta, ya que lo que logra es que primero calcule el metodo de la clase que recibio el mensaje en prmer lugar antes que buscar el metodo en su superclase, logrando asi que se convierta en una especie de "gancho" para que no ejecute el metodo de su superclase antes de revisar si tiene uno igual en su misma clase.
+
+b) this es la instancia de la clase que esta ejecutando el metodode extraer y transferir a cuenta.
+
+c) se definen como protegidos porque son parte de la logica interna de la clase y no deben ser accesibles desde fuera de su jerarquia de clases.
+Al ser protegidos, estos permiten que las subclases cuenta de ahorro y cuentacorriente accedan y utilicen esos metodos para implementar su propia logica.
+
+d)Si, los metodos transferirCuenta() en ambas clases utilizan el metodo extraer de la clase Cuenta(), la cual se refiere en puedeExtraer(). Como ambos tipos de cuenta son subclases de Cuenta, pueden interactuar entre si.
+
+e) Un método abstracto se declara en una clase abstracta usando la palabra clave abstract.
+cualquier clase que herede de una clase abstracta debe implementar todos los métodos abstractos de esa clase, 
+al menos que la clase heredada también se declare como abstracta. Si es asi el caso, la subclase puede decidir por no implementar el método abstracto, pero debe seguir siendo declarada como abstracta.
+El compilador tira un error de compilación. El mensaje de error indica que falta la implementación del método abstracto.
